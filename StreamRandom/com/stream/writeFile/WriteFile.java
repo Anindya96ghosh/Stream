@@ -9,13 +9,14 @@ public class WriteFile {
 	private boolean append_to_file = false;
 	
 
-	
+	//Parameterized Constructor
 	public WriteFile(String file_path, boolean append_value)
 	{
 		path=file_path;
 		append_to_file= append_value;
 	}
 	
+	//Function to Write to a file
 	public void writeToFile(String textLine) throws IOException
 	{
 		FileWriter write=new FileWriter(path, append_to_file);
