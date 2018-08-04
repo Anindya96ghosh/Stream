@@ -30,16 +30,21 @@ public class PerformOperations {
 
 	}
 
+	//logic to check whether the number is odd
 	private static Predicate<Integer> isOdd() {
 		Predicate<Integer> isOdd = n -> n % 2 != 0;
 		return isOdd;
 	}
 
+	
+	//logic to check whether the number is prime
 	private static Predicate<Integer> isPrime() {
 		Predicate<Integer> isPrime = n -> n > 1 && IntStream.range(2, n - 1).noneMatch(i -> n % i == 0);
 		return isPrime;
 	}
 
+	
+	//logic to check whether the number is palindrome
 	private static Predicate<Integer> isPalindrome(){
 		Predicate<Integer> isPalindrome = n -> Integer.toString(n).equals(new StringBuilder(Integer.toString(n)).reverse().toString());
 		return isPalindrome;
